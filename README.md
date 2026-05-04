@@ -5,36 +5,6 @@ skew_z strategy backtested in `BTC/multi_asset_combined.py`.  Runs once
 per invocation, designed to be called from cron / Task Scheduler / a
 hosted job runner.
 
-## Push this to your private GitHub repo
-
-The local repo is already initialized and the initial commit is in
-place.  To create the remote and push:
-
-```powershell
-# Option A: with GitHub CLI (preferred -- one command does it all)
-#   1) Install gh:    winget install --id GitHub.cli --silent
-#   2) Authenticate:  gh auth login   (browser/device-code flow)
-#   3) Create + push:
-gh repo create satyapravin/deribit --private --source . --remote origin --push
-
-# Option B: without gh (manual remote creation)
-#   1) On https://github.com/new, create an EMPTY private repo named
-#      "deribit" under user `satyapravin`.  Do NOT add a README / .gitignore.
-#   2) Then from this folder:
-git remote add origin https://github.com/satyapravin/deribit.git
-git push -u origin main
-```
-
-Auth notes:
-* HTTPS push will prompt for a GitHub Personal Access Token the first
-  time (use a fine-grained token with `Contents: Read & write` on the
-  new repo only).
-* If you have SSH set up:
-  `git remote add origin git@github.com:satyapravin/deribit.git` instead.
-
-The `.gitignore` already excludes `.env`, all `data/*` (state, trade
-logs, equity curves, market-data CSVs), and `logs/*`, so credentials
-and generated artefacts cannot accidentally end up on GitHub.
 
 ## Two orthogonal switches
 
