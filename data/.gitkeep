@@ -1,0 +1,4 @@
+# Placeholder so this directory exists in the repo.
+# All actual content (state, trade logs, equity curves, market-data
+# warm-up CSVs) is gitignored.  Run `python bootstrap.py` to populate
+# the warm-up CSVs from ../BTC/data/.

@@ -1,0 +1,43 @@
+# Credentials -- NEVER commit
+.env
+.env.local
+.env.*.local
+
+# Generated state, trade logs, equity curves (mode-suffixed)
+data/positions_state_*.json
+data/trade_log_*.csv
+data/equity_*.csv
+
+# Live market-data warm-up CSVs are regenerable via `python bootstrap.py`
+data/*_live.csv
+
+# Run logs (keep the directory, ignore everything else inside)
+logs/*
+!logs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
